@@ -20,7 +20,6 @@
 
 
 
-
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=sherazahmadd&theme=midnight-purple&hide_border=true&show_icons=true&locale=en&layout=compact" alt="sherazahmadd"/></p>
 
 
