@@ -9,6 +9,7 @@
 - 📫 How to reach me **ranazaryab736@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
+
 <p align="left">
 <a href="https://linkedin.com/in/sheraz-ahmad-291b37287" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sheraz-ahmad-291b37287" height="30" width="40" /></a>
 <a href="https://kaggle.com/sherazzahmad" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="sherazzahmad" height="30" width="40" /></a>
