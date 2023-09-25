@@ -21,4 +21,3 @@
 
 <p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=sherazahmadd&theme=midnight-purple&hide_border=true&show_icons=true&locale=en" alt="sherazahmadd" /></p>
 
-
