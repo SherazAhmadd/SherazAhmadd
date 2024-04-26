@@ -2,7 +2,7 @@
 
 <h3 align="center">A passionate Bioinformatian and working on Data-science,ML and R</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sherazahmadd&label=Profile%20views&color=0e75b6&style=flat" alt="sherazahmadd" /> </p>
-<img align="right" alt="code" width="300"src="https://media.licdn.com/dms/image/D4D12AQFl4MjYnkEYNg/article-cover_image-shrink_600_2000/0/1707512073268?e=2147483647&v=beta&t=gJYTY4AZfnT_b8FQ3Y3ZEPlAeGckqDlcx-w6vPrRgYY">
+<img align="right" alt="code" height="250" width="500"src="https://media.licdn.com/dms/image/D4D12AQFl4MjYnkEYNg/article-cover_image-shrink_600_2000/0/1707512073268?e=2147483647&v=beta&t=gJYTY4AZfnT_b8FQ3Y3ZEPlAeGckqDlcx-w6vPrRgYY">
 
 - 📫 How to reach me **ranazaryab736@gmail.com**
 
