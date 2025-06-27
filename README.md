@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/BWA-2C003E?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/GATK-2C003E?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/Galaxy-2C003E?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/MUMmer4-2C003E?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/Bedtools-2C003E?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/Bash-2C003E?style=for-the-badge&logo=gnu-bash&logoColor=white" />
   <img src="https://img.shields.io/badge/PyMOL-2C003E?style=for-the-badge&logo=pymol&logoColor=white" />
