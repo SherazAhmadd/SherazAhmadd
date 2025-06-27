@@ -9,27 +9,27 @@
 <h3 align="center">🔬 Bioinformatics Tools I Use</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/BLAST-2C003E?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Biopython-3E065F?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/SAMtools-5A189A?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/BWA-4B0082?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/GATK-581C87?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Galaxy-6B21A8?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/MUMmer4-7E22CE?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bedtools-9333EA?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-6C3483?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyMOL-7C3AED?style=for-the-badge&logo=pymol&logoColor=white" />
-  <img src="https://img.shields.io/badge/RDKit-5B2C6F?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Biopython-2C003E?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/SAMtools-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/BWA-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/GATK-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Galaxy-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/MUMmer4-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bedtools-2C003E?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bash-2C003E?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyMOL-2C003E?style=for-the-badge&logo=pymol&logoColor=white" />
+  <img src="https://img.shields.io/badge/RDKit-2C003E?style=for-the-badge&logo=python&logoColor=white" />
 </p>
+
 <h3 align="center"> ML/DL Libraries for Bioinformatics</h3>
 <p align="center">
-  <img src="https://img.shields.io/badge/scikit--learn-5B2C6F?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-  <img src="https://img.shields.io/badge/TensorFlow-7E22CE?style=for-the-badge&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-6A0DAD?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/Optuna-4B0082?style=for-the-badge&logo=optuna&logoColor=white" />
-  <img src="https://img.shields.io/badge/XGBoost-8B5CF6?style=for-the-badge&logo=xgboost&logoColor=white" />
-  <img src="https://img.shields.io/badge/LightGBM-9333EA?style=for-the-badge&logo=lightgbm&logoColor=white" />
-  <img src="https://img.shields.io/badge/AutoML-9D4EDD?style=for-the-badge&logo=mlflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/scikit--learn-2C003E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/TensorFlow-2C003E?style=for-the-badge&logo=tensorflow&logoColor=white" />
+  <img src="https://img.shields.io/badge/PyTorch-2C003E?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/Optuna-2C003E?style=for-the-badge&logo=optuna&logoColor=white" />
+  <img src="https://img.shields.io/badge/XGBoost-2C003E?style=for-the-badge&logo=xgboost&logoColor=white" />
+  <img src="https://img.shields.io/badge/LightGBM-2C003E?style=for-the-badge&logo=lightgbm&logoColor=white" />
+  <img src="https://img.shields.io/badge/AutoML-2C003E?style=for-the-badge&logo=mlflow&logoColor=white" />
 </p>
 
 
@@ -134,20 +134,21 @@
 
 <!-- Skill Badges -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Machine%20Learning-6A0DAD?style=for-the-badge&logo=TensorFlow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Deep%20Learning-8A2BE2?style=for-the-badge&logo=pytorch&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Bioinformatics-7B68EE?style=for-the-badge&logo=dna&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Python-6C3483?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Linux-4B0082?style=for-the-badge&logo=linux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Machine%20Learning-2C003E?style=for-the-badge&logo=TensorFlow&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Deep%20Learning-2C003E?style=for-the-badge&logo=pytorch&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Bioinformatics-2C003E?style=for-the-badge&logo=dna&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-2C003E?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Linux-2C003E?style=for-the-badge&logo=linux&logoColor=white"/>
 </p>
+
 
 <h3 align="center">🤝 Let’s Collaborate</h3>
 <p align="center">I’m open to collaboration on genomics, bioinformatics pipelines, and AI-driven healthcare research. Let’s contribute something impactful together to the scientific society!</p>
 
 <!-- Dynamic quote badge -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines=Turning+data+into+discovery...;Learning+AI+for+biology.;Bioinformatics+is+my+superpower!&center=true&width=500&height=45">
-</p> 
+  <img src="https://readme-typing-svg.herokuapp.com?lines=Turning+data+into+discovery...;Learning+AI+for+biology.;Bioinformatics+is+my+superpower!&center=true&width=500&height=45&color=FFFFFF&background=2C003EFF">
+</p>
 
 
 
