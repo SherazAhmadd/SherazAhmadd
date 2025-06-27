@@ -146,8 +146,9 @@
 <p align="center">I’m open to collaboration on genomics, bioinformatics pipelines, and AI-driven healthcare research. Let’s contribute something impactful together to the scientific society!</p>
 
 <!-- Dynamic quote badge -->
+<!-- Dynamic quote badge -->
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?lines=Turning+data+into+discovery...;Learning+AI+for+biology.;Bioinformatics+is+my+superpower!&center=true&width=500&height=45&color=FFFFFF&background=2C003EFF">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=Turning+data+into+discovery...;Learning+AI+for+biology.;Bioinformatics+is+my+superpower!&center=true&width=500&height=45">
 </p>
 
 
