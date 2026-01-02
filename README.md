@@ -1,12 +1,30 @@
-<h1 align="center">I'm Sheraz</h1>
+<h1 align="center">I'm Rana Sheraz Ahmad </h1>
+
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=sherazahmadd&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
 
 <!-- Dev Quote -->
-<h3 align="center">“In bioinformatics, data is noisy but truth is encoded — my job is to decode it.”</h3>
-<h3 align="center">🔬 My Research Interests</h3>
-<p align="center">
-🧬 Comparative Genomics •  Deep Learning in Biology •  Multi-Omics Data Integration •  Structural Variations & genetic diversity •  Pipeline Development•  Drug Discovery with AI
-</p>
-<h3 align="center">🔬 Bioinformatics Tools I Use</h3>
+<h3 align="center">“Transforming complex biological data into meaningful insights through computational biology and AI”</h3>
+<h3 align="center"> My Research Interests</h3>
+
+<div align="center">
+  <!-- Left Column -->
+  <div style="display: inline-block; text-align: left; margin-right: 60px;">
+    Computational and Comparative Genomics<br>
+    Deep Learning in Structural Biology<br>
+    Multi-Omics Data Integration
+  </div>
+
+  <!-- Right Column -->
+  <div style="display: inline-block; text-align: left; margin-left: 60px;">
+    3D Genome Organization <br>
+    Drug Discovery with AI <br>
+    Pipeline Development<br>
+  </div>
+</div>
+
+<h3 align="center">Bioinformatics Tools I Use</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Biopython-2C003E?style=for-the-badge&logo=python&logoColor=white" />
@@ -34,19 +52,34 @@
 
 
 
-<h3 align="center">🚀 Featured Projects</h3>
-<p>
-  🔹 <strong>Structural Variation Extractor:</strong> XtractPAV: A pipeline to detect and annotate genomic structural variations from whole-genome data.<br>
-  🔹 <strong>Citnet7:</strong> A DL-based disease diagnosis framework using DCNN <br>
-  🔹 <strong>DeepDrug:</strong> A DL-based drug discovery framework using attention and protein-ligand embeddings.<br>
+<h3>Featured Projects</h3>
+
+<p align="left">
+  <a href="https://github.com/SherazAhmadd/XtractPAV" target="_blank">
+    <img src="https://img.shields.io/badge/XtractPAV-2C003E?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <br>
+  <em>A pipeline to detect and annotate presence-absence variations from multiple assembled genomes </em>
+  <br><br>
+
+  <a href="https://github.com/SherazAhmadd/CitNet7" target="_blank">
+    <img src="https://img.shields.io/badge/CitNet7-2C003E?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <br>
+  <em>A deep learning–based citrus-plant disease diagnosis framework using DCNN architectures.</em>
+  <br><br>
+
+  <a href="https://github.com/SherazAhmadd/PlantLTR-Scan" target="_blank">
+    <img src="https://img.shields.io/badge/PlantLTR--Scan-2C003E?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <br>
+  <em>A end-to-end pipeline tool for identification and analysis of LTR retrotransposons in plant genomes.</em>
 </p>
 
 
 
+<img align="right" alt="code" height="250" width="500" src="https://media.licdn.com/dms/image/D4D12AQFl4MjYnkEYNg/article-cover_image-shrink_600_2000/0/1707512073268?e=2147483647&v=beta&t=gJYTY4AZfnT_b8FQ3Y3ZEPlAeGckqDlcx-w6vPrRgYY">
 
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=sherazahmadd&label=Profile%20views&color=0e75b6&style=flat" alt="sherazahmadd" /> </p>
-<img align="right" alt="code" height="250" width="500"src="https://media.licdn.com/dms/image/D4D12AQFl4MjYnkEYNg/article-cover_image-shrink_600_2000/0/1707512073268?e=2147483647&v=beta&t=gJYTY4AZfnT_b8FQ3Y3ZEPlAeGckqDlcx-w6vPrRgYY">
 
 - 📫 How to reach me **ranasheraz.202101902@gcuf.edu.pk**
 - 🌐 Visit my <a href="https://sherazahmadd.github.io/PortfolioWebsite/" target="_blank">Portfolio Website</a>
@@ -112,24 +145,13 @@
   </a>
 </p>
 
-<!-- Top Languages -->
-<p>
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=sherazahmadd&theme=midnight-purple&hide_border=true&show_icons=true&locale=en&layout=compact" alt="Top Languages" />
-</p>
-
-<!-- GitHub Stats -->
-<p>
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=sherazahmadd&theme=midnight-purple&hide_border=true&show_icons=true&locale=en" alt="GitHub Stats" />
-</p>
 
 
 <!-- Contribution Graph -->
 <p>
   <img align="center" src="https://github-readme-activity-graph.vercel.app/graph?username=sherazahmadd&theme=dracula&hide_border=true" alt="Contribution Graph"/>
 </p>
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sherazahmadd&theme=dracula&no-frame=true&margin-w=10" alt="GitHub Trophy" />
-</p>
+
 
 <!-- Skill Badges -->
 <p align="center">
