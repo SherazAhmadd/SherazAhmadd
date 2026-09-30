@@ -2,7 +2,7 @@
   <img src="metrics/terminal.svg" width="100%" alt="Rana Sheraz Ahmad - terminal card">
 </p>
 
-Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for reading genomes: read aligners, variant extraction pipelines and transposon scanners, written mostly in C++ and Python and run on Linux.
+I am a Research Associate at LUMS, Pakistan. My research interests are in computational genomics, comparative and evolutionary genomics, human genetics, human complex diseases, and bioinformatics method development. For details, visit my research website.
 
 <!-- pinned:start -->
 <img src="assets/icons/label-pinned-repositories.svg" align="left" width="49%" alt="Pinned repositories">
