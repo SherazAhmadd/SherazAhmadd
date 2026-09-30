@@ -41,6 +41,13 @@ jobs:
           config_timezone: Asia/Karachi
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+          extras_css: |
+            h2, h3 { color: #B8860B !important; }
+            h2 svg, h3 svg { fill: #B8860B !important; }
+            .field { color: #777777 !important; }
+            .field svg { fill: #777777 !important; }
+            h2.field, h3.field { color: #B8860B !important; }
+            h2.field svg, h3.field svg { fill: #B8860B !important; }
 
       # Followers (left) and following (right), round avatars
       - name: Followers
