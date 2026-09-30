@@ -1,0 +1,155 @@
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # daily, 00:00 UTC (05:00 in Lahore)
+  workflow_dispatch:       # run manually from the Actions tab
+
+permissions:
+  contents: write          # lets the action commit the generated SVGs
+
+concurrency:
+  group: metrics
+  cancel-in-progress: false
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      # Pinned repositories (left column)
+      - name: Pinned
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/pinned.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_pinned: 4
+          plugin_repositories_forks: yes
+          plugin_repositories_affiliations: owner, collaborator, organization_member
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+
+      # Repository totals and page views (right column); needs repo scope
+      - name: Traffic
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/traffic.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_traffic: yes
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+
+      # One-line contribution strip (classic header, everything but the calendar hidden)
+      - name: Contribution line
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/contribution-line.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header
+          config_timezone: Asia/Karachi
+          extras_css: |
+            h2, .field:not(.calendar) { display: none !important; }
+            .row > section:not(:has(.calendar)) { display: none !important; }
+            .field.calendar { margin: 0 !important; padding: 0 !important; }
+            .field.calendar svg { width: 100% !important; height: auto !important; }
+
+      # Most-used languages (full-width row)
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          plugin_languages_ignored: jupyter notebook, html, css
+          plugin_languages_limit: 8
+          plugin_languages_colors: "0:#F5C518, 1:#5B8DB8, 2:#6FA37A, 3:#C9745B, 4:#9A7FB5, 5:#4FA3A0, 6:#B5A06A, 7:#8A8F98"
+          config_display: large
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+
+      # Starred topics, shown as icons
+      - name: Topics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/topics.svg
+          token: NOT_NEEDED
+          base: ""
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_topics_sort: stars
+          plugin_topics_limit: 0
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+            .topics img { width: 34px !important; height: 34px !important; margin: 0 8px 8px 0 !important; }
+            h2 { display: none !important; }
+
+      # Recent activity (right of starred topics)
+      - name: Activity
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/activity.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          config_timezone: Asia/Karachi
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 0
+          plugin_activity_visibility: public
+          plugin_activity_timestamps: yes
+          plugin_activity_filter: push, pr, issue, release, ref/create, fork, review
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+
+      # Isometric commit calendar, recoloured from GitHub green to signal yellow
+      - name: Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          config_timezone: Asia/Karachi
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          extras_css: |
+            h2, h3 { color: #B8860B !important; }
+            h2 svg, h3 svg { fill: #B8860B !important; }
+            svg[viewBox^="0,0 480"] { filter: hue-rotate(-88deg) saturate(1.35); }
+
+      # Followers (left) and following (right), round avatars
+      - name: Followers
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/followers.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_people: yes
+          plugin_people_types: followers
+          plugin_people_limit: 24
+          plugin_people_size: 28
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
+
+      - name: Following
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics/following.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_people: yes
+          plugin_people_types: following
+          plugin_people_limit: 24
+          plugin_people_size: 28
+          extras_css: |
+            h2 { color: #B8860B !important; }
+            h2 svg { fill: #B8860B !important; }
