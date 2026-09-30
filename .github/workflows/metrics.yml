@@ -44,7 +44,9 @@ jobs:
           extras_css: |
             h2, h3 { color: #B8860B !important; }
             h2 svg, h3 svg { fill: #B8860B !important; }
+            h2 { font-size: 16.3px !important; font-weight: 600 !important; }
             .field { color: #777777 !important; }
+            path[fill="#ebedf0"] { fill: #30363d !important; }
             .field svg { fill: #777777 !important; }
             h2.field, h3.field { color: #B8860B !important; }
             h2.field svg, h3.field svg { fill: #B8860B !important; }
@@ -63,6 +65,7 @@ jobs:
           extras_css: |
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
+            h2 { font-size: 16.7px !important; font-weight: 600 !important; }
 
       - name: Following
         uses: lowlighter/metrics@latest
@@ -77,6 +80,7 @@ jobs:
           extras_css: |
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
+            h2 { font-size: 16.7px !important; font-weight: 600 !important; }
 
       # Recent activity and one clickable card per pinned repo (these read the
       # public API directly: the metrics activity plugin fails on GitHub's current
@@ -92,10 +96,11 @@ jobs:
           python3 scripts/pinned.py
           python3 scripts/contributions.py
           python3 scripts/languages.py
+          python3 scripts/licenses.py
           python3 scripts/right_column.py
       - name: Commit activity and pinned cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add metrics/activity.svg metrics/pinned-*.svg metrics/contribution-line.svg metrics/languages.svg metrics/right-column.svg README.md
+          git add metrics/activity.svg metrics/pinned-*.svg metrics/contribution-line.svg metrics/languages.svg metrics/licenses.svg metrics/right-column.svg README.md
           git diff --cached --quiet || { git commit -m "Update activity and pinned cards - [Skip GitHub Action]"; git push; }

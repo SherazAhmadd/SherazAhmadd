@@ -30,10 +30,11 @@ total = sum(totals.values()) or 1
 langs = sorted(totals.items(), key=lambda kv: -kv[1])[:8]
 
 W = 720
-rows = (len(langs) + 3) // 4
+COLS = min(max(len(langs), 1), 6)                 # legend on one line (up to six languages per line)
+rows = (len(langs) + COLS - 1) // COLS
 H = 44 + rows * 22
 out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Most used languages">',
-       f'<text x="0" y="14" font-family="{SANS}" font-size="14" font-weight="600" fill="{GOLD}">Most used languages</text>',
+       f'<text x="0" y="14" font-family="{SANS}" font-size="11.8" font-weight="600" fill="{GOLD}">Most used languages</text>',
        f'<clipPath id="bar"><rect x="0" y="22" width="{W}" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">']
 x = 0.0
 for i, (name, size) in enumerate(langs):
@@ -42,7 +43,7 @@ for i, (name, size) in enumerate(langs):
     x += w
 out.append("</g>")
 for i, (name, size) in enumerate(langs):
-    cx, cy = (i % 4) * 180, 52 + (i // 4) * 22
+    cx, cy = (i % COLS) * (W // COLS), 52 + (i // COLS) * 22
     out.append(f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" fill="{PALETTE[i]}"/>'
                f'<text x="{cx + 16}" y="{cy}" font-family="{SANS}" font-size="12.5" fill="{GREY}">{name} '
                f'<tspan font-size="11">{size / total:.1%}</tspan></text>')

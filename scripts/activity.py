@@ -70,7 +70,7 @@ if not rows:
 height = 46 + max(len(recent), 1) * 24 - 8
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="420" height="{height}" viewBox="0 0 420 {height}" '
        f'role="img" aria-label="Recent activity"><title>Recent activity</title>'
-       f'<text x="0" y="18" font-family="{SANS}" font-size="14" font-weight="600" fill="{GOLD}">Recent activity</text>'
+       f'<text x="0" y="18" font-family="{SANS}" font-size="14.3" font-weight="600" fill="{GOLD}">Recent activity</text>'
        + "".join(rows) + "</svg>")
 os.makedirs("metrics", exist_ok=True)
 with open("metrics/activity.svg", "w", encoding="utf-8") as fh:

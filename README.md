@@ -4,19 +4,21 @@
 
 Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for reading genomes: read aligners, variant extraction pipelines and transposon scanners, written mostly in C++ and Python and run on Linux.
 
-<a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/right-column.svg" align="right" width="47%" alt="Repositories, contributions and profile views"></a>
 <!-- pinned:start -->
-<img src="assets/icons/label-pinned-repositories.svg" width="47%" alt="Pinned repositories"><br>
-<a href="https://github.com/SherazAhmadd/XtractPAV"><img src="metrics/pinned-1.svg" width="47%" alt="SherazAhmadd/XtractPAV"></a><br>
-<a href="https://github.com/SherazAhmadd/PlantLTR-Scan"><img src="metrics/pinned-2.svg" width="47%" alt="SherazAhmadd/PlantLTR-Scan"></a><br>
-<a href="https://github.com/SherazAhmadd/CitNet7"><img src="metrics/pinned-3.svg" width="47%" alt="SherazAhmadd/CitNet7"></a><br>
-<a href="https://github.com/MuhammadZain-Butt/BioVix"><img src="metrics/pinned-4.svg" width="47%" alt="MuhammadZain-Butt/BioVix"></a><!-- pinned:end --><br clear="both">
+<img src="assets/icons/label-pinned-repositories.svg" align="left" width="49%" alt="Pinned repositories">
+<a href="https://github.com/SherazAhmadd/XtractPAV"><img src="metrics/pinned-1.svg" align="left" width="49%" alt="SherazAhmadd/XtractPAV"></a>
+<a href="https://github.com/SherazAhmadd/PlantLTR-Scan"><img src="metrics/pinned-2.svg" align="left" width="49%" alt="SherazAhmadd/PlantLTR-Scan"></a>
+<a href="https://github.com/SherazAhmadd/CitNet7"><img src="metrics/pinned-3.svg" align="left" width="49%" alt="SherazAhmadd/CitNet7"></a>
+<a href="https://github.com/MuhammadZain-Butt/BioVix"><img src="metrics/pinned-4.svg" align="left" width="49%" alt="MuhammadZain-Butt/BioVix"></a>
+<!-- pinned:end -->
+<img src="assets/spacer.svg" width="1.5%" height="24" alt=""><a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/right-column.svg" width="47%" alt="Repositories, contributions and profile views"></a><br>
+<img src="assets/spacer.svg" width="1.5%" height="24" alt=""><a href="https://www.linkedin.com/in/sherazahmadd/"><img src="assets/icons/linkedin.svg" height="24" alt="LinkedIn" title="LinkedIn"></a>&nbsp;<a href="https://orcid.org/0009-0006-9979-0904"><img src="assets/icons/orcid.svg" height="24" alt="ORCID" title="ORCID 0009-0006-9979-0904"></a>&nbsp;<a href="https://scholar.google.com/citations?user=wmPI3XYAAAAJ&amp;hl=en"><img src="assets/icons/google-scholar.svg" height="24" alt="Google Scholar" title="Google Scholar"></a>&nbsp;<a href="https://kaggle.com/sherazzahmad"><img src="assets/icons/kaggle.svg" height="24" alt="Kaggle" title="Kaggle"></a>&nbsp;<a href="https://sherazahmadd.github.io/PortfolioWebsite/"><img src="assets/icons/portfolio.svg" height="24" alt="Portfolio" title="Portfolio website"></a>&nbsp;<a href="mailto:rana.a@lums.edu.pk"><img src="assets/icons/email-icon.png" height="24" alt="Email" title="Email"></a>
+<br clear="both">
 <a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/languages.svg" width="100%" alt="Most used languages"></a>
 
-<a href="https://github.com/SherazAhmadd"><img src="metrics/isocalendar.svg" align="right" width="47%" alt="Isometric commit calendar"></a>
-
-### Utility belt
-
+<a href="https://github.com/SherazAhmadd"><img src="metrics/isocalendar.svg" align="right" width="48%" alt="Isometric commit calendar"></a>
+<a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/activity.svg" align="right" width="48%" alt="Recent activity"></a>
+<img src="assets/icons/label-utility-belt.svg" width="49%" alt="Utility belt"><br>
 <a href="https://www.nextflow.io"><img src="assets/icons/nextflow.svg" height="28" alt="Nextflow" title="Nextflow"></a>&nbsp;
 <a href="https://nf-co.re"><img src="assets/icons/nf-core.png" height="28" alt="nf-core" title="nf-core"></a>&nbsp;
 <a href="https://snakemake.github.io"><img src="assets/icons/snakemake.png" height="28" alt="Snakemake" title="Snakemake"></a>&nbsp;
@@ -31,9 +33,8 @@ Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for rea
 <a href="https://www.overleaf.com"><img src="assets/icons/overleaf.svg" height="28" alt="Overleaf" title="Overleaf"></a>&nbsp;
 <a href="https://www.zotero.org"><img src="assets/icons/zotero.svg" height="28" alt="Zotero" title="Zotero"></a>&nbsp;
 <a href="https://colab.research.google.com"><img src="assets/icons/google-colab.svg" height="28" alt="Google Colab" title="Google Colab"></a>&nbsp;
-<a href="https://huggingface.co"><img src="assets/icons/hugging-face.svg" height="28" alt="Hugging Face" title="Hugging Face"></a>
-
-<img src="assets/icons/label-bioinformatics-pipelines.svg" width="47%" alt="Bioinformatics pipelines"><br>
+<a href="https://huggingface.co"><img src="assets/icons/hugging-face.svg" height="28" alt="Hugging Face" title="Hugging Face"></a><br>
+<img src="assets/icons/label-bioinformatics-pipelines.svg" width="49%" alt="Bioinformatics pipelines"><br>
 <a href="https://github.com/lh3/bwa"><img src="assets/icons/bwa.svg" height="28" alt="BWA" title="BWA"></a>&nbsp;
 <a href="https://github.com/lh3/minimap2"><img src="assets/icons/minimap2.svg" height="28" alt="minimap2" title="minimap2"></a>&nbsp;
 <a href="https://github.com/alexdobin/STAR"><img src="assets/icons/star.svg" height="28" alt="STAR" title="STAR"></a>&nbsp;
@@ -55,9 +56,8 @@ Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for rea
 <a href="https://iqtree.github.io"><img src="assets/icons/iqtree.png" height="28" alt="IQ-TREE" title="IQ-TREE"></a>&nbsp;
 <a href="https://cytoscape.org"><img src="assets/icons/cytoscape.png" height="28" alt="Cytoscape" title="Cytoscape"></a>&nbsp;
 <a href="https://rosettacommons.org"><img src="assets/icons/rosetta.png" height="28" alt="Rosetta" title="Rosetta"></a>&nbsp;
-<a href="https://www.rdkit.org"><img src="assets/icons/rdkit.png" height="28" alt="RDKit" title="RDKit"></a><br clear="both">
-<a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/activity.svg" align="right" width="47%" alt="Recent activity"></a>
-<img src="assets/icons/label-programming-frameworks.svg" width="47%" alt="Programming frameworks"><br>
+<a href="https://www.rdkit.org"><img src="assets/icons/rdkit.png" height="28" alt="RDKit" title="RDKit"></a><br>
+<img src="assets/icons/label-programming-frameworks.svg" width="49%" alt="Programming frameworks"><br>
 <a href="https://github.com/topics/python"><img src="assets/icons/topics/python.png" height="34" alt="Python" title="Python"></a>&nbsp;
 <a href="https://github.com/topics/cpp"><img src="assets/icons/topics/cpp.png" height="34" alt="C++" title="C++"></a>&nbsp;
 <a href="https://github.com/topics/bash"><img src="assets/icons/topics/bash.png" height="34" alt="Bash" title="Bash"></a>&nbsp;
@@ -74,33 +74,21 @@ Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for rea
 <a href="https://github.com/topics/jupyter-notebook"><img src="assets/icons/topics/jupyter-notebook.png" height="34" alt="Jupyter" title="Jupyter"></a>&nbsp;
 <a href="https://github.com/topics/docker"><img src="assets/icons/topics/docker.png" height="34" alt="Docker" title="Docker"></a>&nbsp;
 <a href="https://github.com/topics/opencv"><img src="assets/icons/topics/opencv.png" height="34" alt="OpenCV" title="OpenCV"></a>&nbsp;
-<a href="https://github.com/topics/cuda"><img src="assets/icons/topics/cuda.png" height="34" alt="CUDA" title="CUDA"></a>
+<a href="https://github.com/topics/cuda"><img src="assets/icons/topics/cuda.png" height="34" alt="CUDA" title="CUDA"></a><br>
+<a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/licenses.svg" width="49%" alt="Licenses overview"></a>
 <br clear="both">
-
-### Connect with me
-
-<p align="left">
-  <a href="mailto:rana.a@lums.edu.pk"><img src="assets/icons/email.svg" height="24" alt="email: rana.a@lums.edu.pk" title="rana.a@lums.edu.pk"></a>&nbsp;
-  <a href="https://linkedin.com/in/sheraz-ahmad-291b37287"><img src="assets/icons/linkedin.svg" height="24" alt="LinkedIn" title="LinkedIn"></a>&nbsp;
-  <a href="https://orcid.org/0009-0006-9979-0904"><img src="assets/icons/orcid.svg" height="24" alt="ORCID" title="ORCID 0009-0006-9979-0904"></a>&nbsp;
-  <a href="https://scholar.google.com/citations?user=wmPI3XYAAAAJ&amp;hl=en"><img src="assets/icons/google-scholar.svg" height="24" alt="Google Scholar" title="Google Scholar"></a>&nbsp;
-  <a href="https://kaggle.com/sherazzahmad"><img src="assets/icons/kaggle.svg" height="24" alt="Kaggle" title="Kaggle"></a>&nbsp;
-  <a href="https://sherazahmadd.github.io/PortfolioWebsite/"><img src="assets/icons/portfolio.svg" height="24" alt="Portfolio" title="Portfolio website"></a>
-</p>
 
 <a href="https://github.com/SherazAhmadd?tab=followers"><img src="metrics/followers.svg" align="left" width="47%" alt="Followers"></a>
 <a href="https://github.com/SherazAhmadd?tab=following"><img src="metrics/following.svg" align="right" width="47%" alt="Following"></a>
 <br clear="both">
 
-<h3 align="center">Affiliations</h3>
-
 <p align="center">
+  <img src="assets/icons/label-affiliations.svg" width="49%" alt="Affiliations and Collaborations"><br>
   <a href="https://gcuf.edu.pk"><img src="assets/affiliations/gcuf.svg" height="44" alt="GCUF" title="GCUF"></a>&nbsp;
   <img src="assets/affiliations/iomm.svg" height="44" alt="IOMM Lab" title="Integrative Omics and Molecular Modelling Lab">&nbsp;
   <a href="https://sunwayuniversity.edu.my"><img src="assets/affiliations/sunway.svg" height="44" alt="Sunway University" title="Sunway University"></a>&nbsp;
   <a href="https://www.chalmers.se/en/"><img src="assets/affiliations/chalmers.svg" height="44" alt="Chalmers University of Technology" title="Chalmers University of Technology"></a>&nbsp;
   <a href="https://www.gu.se/en"><img src="assets/affiliations/gothenburg.svg" height="44" alt="University of Gothenburg" title="University of Gothenburg"></a>&nbsp;
-  <a href="https://lums.edu.pk"><img src="assets/affiliations/lums.svg" height="44" alt="LUMS" title="LUMS"></a>
+  <a href="https://sbasse.lums.edu.pk/"><img src="assets/affiliations/sbasse.svg" height="44" alt="SBASSE, LUMS" title="Syed Babar Ali School of Science and Engineering, LUMS"></a>&nbsp;
+  <a href="https://lums.edu.pk"><img src="assets/affiliations/lums.svg" height="44" alt="LUMS" title="LUMS"></a><img src="https://komarev.com/ghpvc/?username=sherazahmadd&style=flat-square" width="1" height="1" alt="">
 </p>
-
-<img src="https://komarev.com/ghpvc/?username=sherazahmadd&style=flat-square" width="1" height="1" alt="">

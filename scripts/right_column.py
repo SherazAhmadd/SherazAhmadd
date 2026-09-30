@@ -15,6 +15,7 @@ BADGE = ("https://komarev.com/ghpvc/?username=sherazahmadd&label=profile%20views
          "&color=F5C518&labelColor=0d0d0d&style=flat-square")
 W = 480
 GAP = 12
+PAD = 22                                      # clear space under the badge, above the contact icons
 
 
 def size(svg):
@@ -39,12 +40,14 @@ except Exception as exc:                      # keep the previous badge if the c
 
 
 def restyle(svg):
-    """Dark label, and a dark number on the yellow box: readable on light and dark pages."""
-    svg = svg.replace('fill="#555"', 'fill="#0D0D0F"')
+    """"profile views" in dark text on yellow; the number in white on near-black."""
+    svg = re.sub(r'(<rect x="[\d.]+" width="[\d.]+" height="20" fill=")#F5C518(")', r"\g<1>#0D0D0F\2", svg, count=1)
+    svg = svg.replace('fill="#555"', 'fill="#F5C518"', 1)
     texts = re.findall(r'<text[^>]*>[^<]*</text>', svg)
     if len(texts) == 4:                                   # label shadow, label, value shadow, value
-        svg = svg.replace(texts[2], "", 1)
-        svg = svg.replace(texts[3], texts[3].replace("<text ", '<text fill="#0D0D0F" font-weight="bold" ', 1), 1)
+        svg = svg.replace(texts[0], "", 1)
+        svg = svg.replace(texts[1], texts[1].replace("<text ", '<text fill="#0D0D0F" ', 1), 1)
+        svg = svg.replace(texts[3], texts[3].replace("<text ", '<text font-weight="bold" ', 1), 1)
     return svg
 
 
@@ -59,8 +62,8 @@ for svg in parts:
 if badge:
     bw, bh = size(badge)
     y += GAP
-    images.append(f'<image href="{uri(badge)}" x="8" y="{y:.1f}" width="{bw * 20 / bh:.1f}" height="20"/>')
-    y += 20
+    images.append(f'<image href="{uri(badge)}" x="0" y="{y:.1f}" width="{bw * 20 / bh:.1f}" height="20"/>')
+    y += 20 + PAD
 
 out = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{y:.0f}" viewBox="0 0 {W} {y:.0f}" '
        f'role="img" aria-label="Repositories, contributions and profile views">' + "".join(images) + "</svg>")
