@@ -40,6 +40,7 @@ jobs:
           base: ""
           config_timezone: Asia/Karachi
           plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
 
       # Followers (left) and following (right), round avatars
       - name: Followers
