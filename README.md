@@ -10,13 +10,8 @@ Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for rea
 <a href="https://github.com/SherazAhmadd/XtractPAV"><img src="metrics/pinned-1.svg" width="47%" alt="SherazAhmadd/XtractPAV"></a><br>
 <a href="https://github.com/SherazAhmadd/PlantLTR-Scan"><img src="metrics/pinned-2.svg" width="47%" alt="SherazAhmadd/PlantLTR-Scan"></a><br>
 <a href="https://github.com/SherazAhmadd/CitNet7"><img src="metrics/pinned-3.svg" width="47%" alt="SherazAhmadd/CitNet7"></a><br>
-<a href="https://github.com/MuhammadZain-Butt/BioVix"><img src="metrics/pinned-4.svg" width="47%" alt="MuhammadZain-Butt/BioVix"></a><br>
-<!-- pinned:end -->
-<br clear="both">
-
-<p align="center">
-  <a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/languages.svg" width="100%" alt="Most used languages"></a>
-</p>
+<a href="https://github.com/MuhammadZain-Butt/BioVix"><img src="metrics/pinned-4.svg" width="47%" alt="MuhammadZain-Butt/BioVix"></a><!-- pinned:end --><br clear="both">
+<a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/languages.svg" width="100%" alt="Most used languages"></a>
 
 <a href="https://github.com/SherazAhmadd"><img src="metrics/isocalendar.svg" align="right" width="47%" alt="Isometric commit calendar"></a>
 

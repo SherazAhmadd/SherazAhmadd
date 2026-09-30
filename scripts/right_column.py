@@ -37,6 +37,19 @@ except Exception as exc:                      # keep the previous badge if the c
     m = re.findall(r'href="(data:image/svg\+xml;base64,[^"]+)"', old)
     badge = base64.b64decode(m[-1].split(",", 1)[1]).decode("utf-8") if len(m) == 3 else None
 
+
+def restyle(svg):
+    """Dark label, and a dark number on the yellow box: readable on light and dark pages."""
+    svg = svg.replace('fill="#555"', 'fill="#0D0D0F"')
+    texts = re.findall(r'<text[^>]*>[^<]*</text>', svg)
+    if len(texts) == 4:                                   # label shadow, label, value shadow, value
+        svg = svg.replace(texts[2], "", 1)
+        svg = svg.replace(texts[3], texts[3].replace("<text ", '<text fill="#0D0D0F" font-weight="bold" ', 1), 1)
+    return svg
+
+
+if badge:
+    badge = restyle(badge)
 y, images = 0.0, []
 for svg in parts:
     w, h = size(svg)

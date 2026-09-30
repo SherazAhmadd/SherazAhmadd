@@ -56,10 +56,10 @@ for i, repo in enumerate(repos, start=1):
     with open(f"metrics/pinned-{i}.svg", "w", encoding="utf-8") as fh:
         fh.write(card(repo))
     lines.append(f'<a href="{repo["url"]}"><img src="metrics/pinned-{i}.svg" width="47%" '
-                 f'alt="{html.escape(repo["name"])}"></a><br>')
+                 f'alt="{html.escape(repo["name"])}"></a>' + ("<br>" if i < len(repos) else ""))
 
 readme = open("README.md", encoding="utf-8").read()
-block = "<!-- pinned:start -->\n" + "\n".join(lines) + "\n<!-- pinned:end -->"
+block = "<!-- pinned:start -->\n" + "\n".join(lines) + "<!-- pinned:end -->"
 readme = re.sub(r"<!-- pinned:start -->.*?<!-- pinned:end -->", lambda _: block, readme, flags=re.S)
 with open("README.md", "w", encoding="utf-8") as fh:
     fh.write(readme)

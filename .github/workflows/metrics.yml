@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 0 * * *"   # daily, 00:00 UTC (05:00 in Lahore)
   workflow_dispatch:       # run manually from the Actions tab
+  push:
+    branches: [main]
+    paths: [".github/workflows/metrics.yml", "scripts/**"]
 
 permissions:
   contents: write          # lets the action commit the generated SVGs
@@ -28,23 +31,15 @@ jobs:
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
 
-      # Most-used languages (full-width row)
-      - name: Languages
+      # Isometric commit calendar: the plugin's own style and colours
+      - name: Calendar
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics/languages.svg
+          filename: metrics/isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_details: percentage
-          plugin_languages_ignored: jupyter notebook, html, css
-          plugin_languages_limit: 8
-          plugin_languages_colors: "0:#F5C518, 1:#5B8DB8, 2:#6FA37A, 3:#C9745B, 4:#9A7FB5, 5:#4FA3A0, 6:#B5A06A, 7:#8A8F98"
-          config_display: large
-          extras_css: |
-            h2 { color: #B8860B !important; }
-            h2 svg { fill: #B8860B !important; }
+          config_timezone: Asia/Karachi
+          plugin_isocalendar: yes
 
       # Followers (left) and following (right), round avatars
       - name: Followers
@@ -88,10 +83,11 @@ jobs:
           python3 scripts/activity.py
           python3 scripts/pinned.py
           python3 scripts/contributions.py
+          python3 scripts/languages.py
           python3 scripts/right_column.py
       - name: Commit activity and pinned cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add metrics/activity.svg metrics/pinned-*.svg metrics/isocalendar.svg metrics/contribution-line.svg metrics/right-column.svg README.md
+          git add metrics/activity.svg metrics/pinned-*.svg metrics/contribution-line.svg metrics/languages.svg metrics/right-column.svg README.md
           git diff --cached --quiet || { git commit -m "Update activity and pinned cards - [Skip GitHub Action]"; git push; }

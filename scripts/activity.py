@@ -1,8 +1,10 @@
-"""Render metrics/activity.svg: the repositories most recently pushed to.
+"""Render metrics/activity.svg from real commits: "Pushed N commits to <repo>".
 
-Replaces the metrics activity plugin, which fails on GitHub's current
-PushEvent payload. Uses the public REST API only.
+Commits are counted per repository and day across the account's public repos
+(authored by the account or its known emails; bot commits are left out), then
+the five most recent days are shown. Uses the public REST API.
 """
+import collections
 import datetime as dt
 import html
 import json
@@ -10,8 +12,9 @@ import os
 import urllib.request
 
 USER = "SherazAhmadd"
-SKIP = {f"{USER}/{USER}"}                 # the profile repo is updated by this workflow every day
+EMAILS = {"rana.a@lums.edu.pk", "ranasheraz.202101902@gcuf.edu.pk"}
 LIMIT = 5
+SINCE_DAYS = 365
 GOLD, GREY = "#B8860B", "#777777"
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
 
@@ -25,29 +28,44 @@ def api(path):
         return json.load(resp)
 
 
-repos = api(f"/users/{USER}/repos?type=owner&sort=pushed&per_page=30")
-recent = [r for r in repos if r["full_name"] not in SKIP and not r["private"]][:LIMIT]
+since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=SINCE_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
+repos = api(f"/users/{USER}/repos?type=owner&sort=pushed&per_page=100")
+groups = collections.Counter()                     # (date, repo) -> commits
+for repo in repos:
+    if repo["private"]:
+        continue
+    try:
+        commits = api(f"/repos/{repo['full_name']}/commits?since={since}&per_page=100")
+    except Exception:                               # empty repositories answer 409
+        continue
+    for c in commits:
+        login = (c.get("author") or {}).get("login", "")
+        email = c["commit"]["author"].get("email", "")
+        if login.endswith("[bot]") or "github-actions" in email:
+            continue
+        if login == USER or email in EMAILS:
+            groups[(c["commit"]["author"]["date"][:10], repo["full_name"])] += 1
+
+recent = sorted(groups.items(), key=lambda kv: kv[0][0], reverse=True)[:LIMIT]
 
 
-def when(stamp):
-    days = (dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(stamp.replace("Z", "+00:00"))).days
-    if days == 0:
+def when(day):
+    days = (dt.date.today() - dt.date.fromisoformat(day)).days
+    if days <= 0:
         return "today"
     if days < 31:
         return f"{days} day{'s' if days != 1 else ''} ago"
-    return dt.date.fromisoformat(stamp[:10]).strftime("%b %Y")
+    return dt.date.fromisoformat(day).strftime("%d %b %Y")
 
 
 rows = []
-for i, r in enumerate(recent):
+for i, ((day, name), n) in enumerate(recent):
     y = 46 + i * 24
-    verb = "Updated fork" if r["fork"] else "Pushed to"
-    rows.append(f'<text x="0" y="{y}" font-family="{SANS}" font-size="12.5" fill="{GREY}">{verb} '
-                f'<tspan font-weight="600">{html.escape(r["full_name"])}</tspan></text>'
-                f'<text x="420" y="{y}" text-anchor="end" font-family="{SANS}" font-size="11" fill="{GREY}">'
-                f'{when(r["pushed_at"])}</text>')
+    rows.append(f'<text x="0" y="{y}" font-family="{SANS}" font-size="12.5" fill="{GREY}">Pushed {n} commit{"s" if n != 1 else ""} to '
+                f'<tspan font-weight="600">{html.escape(name)}</tspan></text>'
+                f'<text x="420" y="{y}" text-anchor="end" font-family="{SANS}" font-size="11" fill="{GREY}">{when(day)}</text>')
 if not rows:
-    rows.append(f'<text x="0" y="46" font-family="{SANS}" font-size="12.5" fill="{GREY}">No recent public activity</text>')
+    rows.append(f'<text x="0" y="46" font-family="{SANS}" font-size="12.5" fill="{GREY}">No public commits in the last year</text>')
 
 height = 46 + max(len(recent), 1) * 24 - 8
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="420" height="{height}" viewBox="0 0 420 {height}" '
@@ -57,4 +75,4 @@ svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="420" height="{height}" v
 os.makedirs("metrics", exist_ok=True)
 with open("metrics/activity.svg", "w", encoding="utf-8") as fh:
     fh.write(svg)
-print(f"activity.svg: {len(recent)} repositories")
+print(f"activity.svg: {sum(groups.values())} commits in {len(groups)} repo-days; showing {len(recent)}")
