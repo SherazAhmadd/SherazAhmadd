@@ -31,16 +31,6 @@ jobs:
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
 
-      # Isometric commit calendar: the plugin's own style and colours
-      - name: Calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          config_timezone: Asia/Karachi
-          plugin_isocalendar: yes
-
       # Followers (left) and following (right), round avatars
       - name: Followers
         uses: lowlighter/metrics@latest
@@ -89,5 +79,5 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add metrics/activity.svg metrics/pinned-*.svg metrics/contribution-line.svg metrics/languages.svg metrics/right-column.svg README.md
+          git add metrics/activity.svg metrics/pinned-*.svg metrics/isocalendar.svg metrics/contribution-line.svg metrics/languages.svg metrics/right-column.svg README.md
           git diff --cached --quiet || { git commit -m "Update activity and pinned cards - [Skip GitHub Action]"; git push; }
