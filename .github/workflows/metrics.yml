@@ -28,20 +28,6 @@ jobs:
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
 
-      # One-line contribution strip (classic header, everything but the calendar hidden)
-      - name: Contribution line
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/contribution-line.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: header
-          config_timezone: Asia/Karachi
-          extras_css: |
-            h2, .field:not(.calendar) { display: none !important; }
-            .row > section:not(:has(.calendar)) { display: none !important; }
-            .field.calendar { margin: 0 !important; padding: 0 !important; }
-            .field.calendar svg { width: 100% !important; height: auto !important; }
-
       # Most-used languages (full-width row)
       - name: Languages
         uses: lowlighter/metrics@latest
@@ -59,21 +45,6 @@ jobs:
           extras_css: |
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
-
-      # Isometric commit calendar, recoloured from GitHub green to signal yellow
-      - name: Calendar
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/isocalendar.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          config_timezone: Asia/Karachi
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          extras_css: |
-            h2, h3 { color: #B8860B !important; }
-            h2 svg, h3 svg { fill: #B8860B !important; }
-            svg[viewBox^="0,0 480"] { filter: hue-rotate(-88deg) saturate(1.35); }
 
       # Followers (left) and following (right), round avatars
       - name: Followers
@@ -116,10 +87,11 @@ jobs:
         run: |
           python3 scripts/activity.py
           python3 scripts/pinned.py
+          python3 scripts/contributions.py
           python3 scripts/right_column.py
       - name: Commit activity and pinned cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add metrics/activity.svg metrics/pinned-*.svg metrics/right-column.svg README.md
+          git add metrics/activity.svg metrics/pinned-*.svg metrics/isocalendar.svg metrics/contribution-line.svg metrics/right-column.svg README.md
           git diff --cached --quiet || { git commit -m "Update activity and pinned cards - [Skip GitHub Action]"; git push; }

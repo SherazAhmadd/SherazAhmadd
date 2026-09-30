@@ -2,7 +2,7 @@
   <img src="metrics/terminal.svg" width="100%" alt="Rana Sheraz Ahmad - terminal card">
 </p>
 
-<h3>Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for reading genomes: read aligners, variant extraction pipelines and transposon scanners, written mostly in C++ and Python and run on Linux.</h3>
+Bioinformatics Research Associate at SBASSE, LUMS, Lahore. I build tools for reading genomes: read aligners, variant extraction pipelines and transposon scanners, written mostly in C++ and Python and run on Linux.
 
 <a href="https://github.com/SherazAhmadd?tab=repositories"><img src="metrics/right-column.svg" align="right" width="47%" alt="Repositories, contributions and profile views"></a>
 <!-- pinned:start -->
