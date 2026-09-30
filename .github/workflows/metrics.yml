@@ -16,21 +16,6 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      # Pinned repositories (left column)
-      - name: Pinned
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/pinned.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_pinned: 4
-          plugin_repositories_forks: yes
-          plugin_repositories_affiliations: owner, collaborator, organization_member
-          extras_css: |
-            h2 { color: #B8860B !important; }
-            h2 svg { fill: #B8860B !important; }
-
       # Repository totals and page views (right column); needs repo scope
       - name: Traffic
         uses: lowlighter/metrics@latest
@@ -71,41 +56,6 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_colors: "0:#F5C518, 1:#5B8DB8, 2:#6FA37A, 3:#C9745B, 4:#9A7FB5, 5:#4FA3A0, 6:#B5A06A, 7:#8A8F98"
           config_display: large
-          extras_css: |
-            h2 { color: #B8860B !important; }
-            h2 svg { fill: #B8860B !important; }
-
-      # Starred topics, shown as icons
-      - name: Topics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/topics.svg
-          token: NOT_NEEDED
-          base: ""
-          plugin_topics: yes
-          plugin_topics_mode: icons
-          plugin_topics_sort: stars
-          plugin_topics_limit: 0
-          extras_css: |
-            h2 { color: #B8860B !important; }
-            h2 svg { fill: #B8860B !important; }
-            .topics img { width: 34px !important; height: 34px !important; margin: 0 8px 8px 0 !important; }
-            h2 { display: none !important; }
-
-      # Recent activity (right of starred topics)
-      - name: Activity
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics/activity.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          config_timezone: Asia/Karachi
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_days: 0
-          plugin_activity_visibility: public
-          plugin_activity_timestamps: yes
-          plugin_activity_filter: push, pr, issue, release, ref/create, fork, review
           extras_css: |
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
@@ -153,3 +103,23 @@ jobs:
           extras_css: |
             h2 { color: #B8860B !important; }
             h2 svg { fill: #B8860B !important; }
+
+      # Recent activity and one clickable card per pinned repo (these read the
+      # public API directly: the metrics activity plugin fails on GitHub's current
+      # push-event format, and a single metrics image cannot link each repo)
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Activity, pinned cards and right column
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/activity.py
+          python3 scripts/pinned.py
+          python3 scripts/right_column.py
+      - name: Commit activity and pinned cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics/activity.svg metrics/pinned-*.svg metrics/right-column.svg README.md
+          git diff --cached --quiet || { git commit -m "Update activity and pinned cards - [Skip GitHub Action]"; git push; }
