@@ -34,15 +34,32 @@ def pinned():
              "forks": n["forkCount"], "fork": n["isFork"]} for n in nodes]
 
 
+# Advance widths of Arial Bold (per 1000 units, ASCII 32-126). The name is set to
+# exactly this width with textLength, so the thin underline drawn under it matches
+# in every font a viewer's system substitutes.
+ARIAL_BOLD = [278, 333, 474, 556, 556, 889, 722, 238, 333, 333, 389, 584, 278, 333, 278, 278, 556, 556, 556, 556,
+              556, 556, 556, 556, 556, 556, 333, 333, 584, 584, 584, 611, 975, 722, 722, 722, 722, 667, 611, 778,
+              722, 278, 556, 722, 611, 833, 722, 778, 667, 778, 722, 667, 611, 722, 667, 944, 667, 667, 611, 333,
+              278, 333, 584, 556, 333, 556, 611, 556, 611, 556, 333, 611, 611, 278, 278, 556, 278, 889, 611, 611,
+              611, 611, 389, 556, 333, 611, 556, 778, 556, 556, 500, 389, 280, 389, 584]
+
+
+def text_width(text, size):
+    return sum(ARIAL_BOLD[ord(c) - 32] if 32 <= ord(c) < 127 else 611 for c in text) * size / 1000
+
+
 def card(repo):
     e = html.escape
+    name_w = text_width(repo["name"], 14)
     desc = repo["description"]
     desc = desc if len(desc) <= 62 else desc[:61].rstrip() + "…"
     meta = "   ".join(x for x in [repo.get("language") or "", f"★ {repo['stars']}", f"forks {repo['forks']}",
                                   "fork" if repo.get("fork") else ""] if x)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="420" height="54" viewBox="0 0 420 54" role="img" '
             f'aria-label="{e(repo["name"])}"><title>{e(repo["name"])}</title>'
-            f'<text x="0" y="15" font-family="{SANS}" font-size="14" font-weight="600" fill="{GREY}">{e(repo["name"])}</text>'
+            f'<text x="0" y="15" font-family="{SANS}" font-size="14" font-weight="600" fill="{GREY}" '
+            f'textLength="{name_w:.1f}" lengthAdjust="spacing">{e(repo["name"])}</text>'
+            f'<line x1="0" y1="17.6" x2="{name_w:.1f}" y2="17.6" stroke="{GREY}" stroke-width="0.8"/>'
             f'<text x="0" y="33" font-family="{SANS}" font-size="12.5" fill="{GREY}">{e(desc)}</text>'
             f'<text x="0" y="50" font-family="{SANS}" font-size="12" fill="{GREY}">{e(meta)}</text></svg>')
 
